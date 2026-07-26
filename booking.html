@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book a consultation, Habiba Sultan</title>
+<meta name="description" content="Book a consultation with Habiba Sultan, counseling psychologist. See pricing, choose a time, and start with a one-hour conversation about fit." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F2EC;--paper-card:#FBFAF6;--ink:#20262B;--muted:#5C656B;--line:#E4DFD3;
+    --accent:#3D5A74;--accent-deep:#2B4256;--accent-wash:#E7ECEF;--sand:#E9E0CF;
+    --display:'Newsreader',Georgia,serif;--sans:'Hanken Grotesk',system-ui,-apple-system,sans-serif;--maxw:1000px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.01em;line-height:1.14;margin:0;}
+  p{margin:0 0 1em;}
+  .eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--sans);font-weight:600;font-size:15.5px;padding:14px 24px;border-radius:999px;border:1px solid transparent;text-decoration:none;cursor:pointer;transition:transform .15s ease,background .2s ease,border-color .2s ease;}
+  .btn-primary{background:var(--accent);color:#fff;}
+  .btn-primary:hover{background:var(--accent-deep);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:var(--accent-deep);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--accent);transform:translateY(-1px);}
+  .btn-wa{background:#1EA362;color:#fff;}
+  .btn-wa:hover{background:#178a52;transform:translateY(-1px);}
+  .btn-lg{font-size:17px;padding:17px 30px;}
+  a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2.5px solid var(--accent);outline-offset:3px;border-radius:8px;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(244,242,236,.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{font-family:var(--display);font-size:20px;text-decoration:none;color:var(--ink);}
+  .brand b{font-weight:500;}
+  .back{font-size:14.5px;font-weight:500;color:var(--muted);text-decoration:none;}
+  .back:hover{color:var(--ink);}
+
+  section{padding:42px 0;}
+  .intro{padding-top:46px;}
+  .intro h1{font-size:clamp(31px,7vw,48px);font-weight:300;margin-bottom:18px;}
+  .intro h1 em{font-style:italic;color:var(--accent);}
+  .intro .lead{font-size:18px;color:var(--muted);max-width:60ch;}
+
+  .book-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+  .sched{margin-top:26px;background:var(--paper-card);border:1px solid var(--line);border-radius:16px;padding:14px;}
+  .calendly-inline-widget{min-width:320px;height:680px;border-radius:10px;overflow:hidden;}
+  .sched-offline{text-align:center;padding:50px 24px;}
+  .so-title{font-family:var(--display);font-size:28px;color:var(--ink);margin:0 0 10px;}
+  .so-body{font-size:16px;color:var(--muted);max-width:44ch;margin:0 auto 22px;}
+
+  .section-head{margin-bottom:26px;}
+  .section-head h2{font-size:clamp(25px,5vw,36px);}
+  .section-head p{color:var(--muted);margin-top:12px;}
+
+  .rate-grid{display:grid;gap:18px;}
+  .rate-card{background:var(--paper-card);border:1px solid var(--line);border-radius:16px;padding:26px 24px;display:flex;flex-direction:column;}
+  .rate-eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;}
+  .rate{display:flex;align-items:baseline;gap:9px;margin:0 0 7px;font-family:var(--display);}
+  .rate b{font-weight:400;font-size:37px;color:var(--ink);line-height:1;}
+  .rate.alt b{font-size:29px;}
+  .rate.alt{margin-top:-2px;}
+  .rate span{font-family:var(--sans);font-size:14px;color:var(--muted);font-weight:500;}
+  .rate-note{font-size:14.5px;color:var(--muted);margin:0 0 18px;}
+  .pay-methods{display:flex;flex-direction:column;gap:10px;margin-top:auto;}
+  .copy{display:inline-flex;align-items:center;gap:10px;justify-content:space-between;width:100%;text-align:left;font-family:var(--sans);font-size:14px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:11px 14px;cursor:pointer;transition:border-color .2s,background .2s;}
+  .copy:hover{border-color:var(--accent);}
+  .copy .lbl b{font-weight:600;}
+  .copy .ico{color:var(--accent);font-size:13px;font-weight:600;flex:none;white-space:nowrap;}
+  .copy.copied{border-color:var(--accent);background:var(--accent-wash);}
+
+  .notice{margin-top:22px;display:flex;gap:14px;align-items:flex-start;background:var(--accent-wash);border:1px solid #cfdbe3;border-radius:14px;padding:18px 20px;}
+  .notice .mark{flex:none;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;}
+  .notice p{margin:0;font-size:15px;color:var(--accent-deep);}
+  .notice b{color:var(--ink);}
+
+  .help-band{background:var(--accent);color:#eef3f5;border-radius:20px;padding:34px 26px;text-align:center;}
+  .help-band .eyebrow{color:#aebfcb;}
+  .help-band h2{color:#fff;font-size:clamp(24px,4.6vw,32px);margin-bottom:10px;}
+  .help-band p{color:#d4dde3;max-width:48ch;margin:0 auto 22px;}
+  .help-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+  .help-band .btn-ghost{color:#fff;border-color:rgba(255,255,255,.45);}
+  .help-band .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+
+  footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--muted);font-size:14px;}
+  .crisis{background:var(--paper-card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:13.5px;line-height:1.55;max-width:640px;}
+  .crisis b{color:var(--ink);}
+  .foot-meta{font-size:12.5px;color:#8a8f8c;margin-top:20px;}
+
+  @media(min-width:760px){
+    .rate-grid{grid-template-columns:1fr 1fr;}
+    section{padding:54px 0;}
+    .help-band{padding:48px 40px;}
+  }
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.btn{transition:none;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">Habiba <b>Sultan</b></a>
+    <a class="back" href="index.html">&larr; Back to site</a>
+  </div>
+</header>
+
+<main>
+  <!-- INTRO + SCHEDULER -->
+  <section class="intro">
+    <div class="wrap">
+      <h1>Book a <em>consultation</em>.</h1>
+      <p class="lead">The consultation is a relaxed hour to talk through what's bringing you here and what you're hoping for.</p>
+      <div class="book-actions">
+        <a class="btn btn-primary btn-lg" href="https://calendly.com/habiba-rotter/30min" target="_blank" rel="noopener">Choose a time and book</a>
+        <a class="btn btn-wa" href="https://wa.me/18318886756" target="_blank" rel="noopener">Contact via WhatsApp</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Pricing</p>
+        <h2>Sessions are one hour, online.</h2>
+        <p>Choose the option that fits you, then pay using the matching method below.</p>
+      </div>
+      <div class="rate-grid">
+        <div class="rate-card">
+          <p class="rate-eyebrow">In Egypt</p>
+          <p class="rate"><b>EGP 1,400</b><span>/ individual session</span></p>
+          <p class="rate alt"><b>EGP 2,000</b><span>/ couples session</span></p>
+          <p class="rate-note">For clients residing in Egypt.</p>
+          <div class="pay-methods">
+            <a class="btn btn-primary" href="https://ipn.eg/S/habeebasultan/instapay/73YXAq">Pay via InstaPay</a>
+          </div>
+        </div>
+        <div class="rate-card">
+          <p class="rate-eyebrow">International</p>
+          <p class="rate"><b>USD 60</b><span>/ session</span></p>
+          <p class="rate-note">Pay by Wise or Zelle, tap to copy:</p>
+          <div class="pay-methods">
+            <button type="button" class="copy" data-copy="@habibar25"><span class="lbl">Wise &middot; <b>@habibar25</b></span><span class="ico">Copy</span></button>
+            <button type="button" class="copy" data-copy="habiba.rotter@gmail.com"><span class="lbl">Zelle &middot; <b>habiba.rotter@gmail.com</b></span><span class="ico">Copy</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="notice">
+        <span class="mark" aria-hidden="true">i</span>
+        <p><b>Payment is due 24 hours before your session date.</b> Booking your time and sending payment at least a day ahead keeps your slot reserved and our session ready to go.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HELP / WHATSAPP -->
+  <section class="help">
+    <div class="wrap">
+      <div class="help-band">
+        <p class="eyebrow">Not sure yet?</p>
+        <h2>Questions before you book?</h2>
+        <p>If you'd like a quick word about whether we're a good fit, or anything about how sessions work, message me on WhatsApp. I'm happy to help.</p>
+        <div class="help-cta">
+          <a class="btn btn-wa" href="https://wa.me/18318886756" target="_blank" rel="noopener">Contact via WhatsApp</a>
+          <a class="btn btn-ghost" href="mailto:habiba.rotter@gmail.com">Email a question</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="crisis">
+      <b>This isn't a crisis service.</b> If you're in immediate danger or thinking about harming yourself, please contact your local emergency number or nearest crisis line right away. They can reach you faster than email.
+    </div>
+    <p class="foot-meta">&copy; <span id="yr"></span> Habiba Sultan. All rights reserved. &middot; <a href="index.html" style="color:var(--accent-deep);">Back to site</a></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+
+
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-copy');
+      if(navigator.clipboard){navigator.clipboard.writeText(t);}
+      var ico=b.querySelector('.ico');var prev=ico?ico.textContent:'';
+      b.classList.add('copied'); if(ico)ico.textContent='Copied';
+      setTimeout(function(){b.classList.remove('copied'); if(ico)ico.textContent=prev;},1600);
+    });
+  });
+</script>
+</body>
+</html>
